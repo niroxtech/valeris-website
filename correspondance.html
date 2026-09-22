@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VALERIS — Correspondence</title>
+  <meta name="description" content="Private enquiry to VALERIS. No public address is published on this site.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Schibsted+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body data-page="mail">
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+  <main id="content" class="page">
+    <div class="wrap page-intro">
+      <p class="section-label" data-i18n="nav_mail">Correspondence</p>
+      <h1 data-lang="en">Write once,<br>and plainly.</h1>
+      <h1 data-lang="fr" hidden>Écrire une fois,<br>et clairement.</h1>
+      <p class="prose" data-lang="en">This form does not transmit a message to a server. It prepares a private note you can send through a channel you already trust. A telephone number, street address, and mailbox are intentionally absent until they are given to you directly.</p>
+      <p class="prose" data-lang="fr" hidden>Ce formulaire ne transmet pas de message vers un serveur. Il prépare une note privée que vous pouvez envoyer par un canal que vous connaissez déjà. Numéro, adresse et boîte de réception sont volontairement absents jusqu’à ce qu’ils vous soient communiqués directement.</p>
+    </div>
+    <div class="wrap band" style="padding-top: 0; padding-bottom: 5rem;">
+      <form class="form" id="enquiry-form" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="name" data-i18n="form_name">Name</label>
+            <input id="name" name="name" autocomplete="name">
+            <div class="error" data-error="name"></div>
+          </div>
+          <div class="field">
+            <label for="place" data-i18n="form_place">City / country</label>
+            <input id="place" name="place" autocomplete="address-level2">
+            <div class="error" data-error="place"></div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="interest" data-i18n="form_interest">Interest</label>
+            <select id="interest" name="interest">
+              <option value="Automobile" data-i18n="form_opt_car">Automobile</option>
+              <option value="Watch" data-i18n="form_opt_watch">Watch</option>
+              <option value="Both" data-i18n="form_opt_both">Both</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="role" data-i18n="form_role">Position</label>
+            <select id="role" name="role">
+              <option value="Buyer" data-i18n="form_opt_buy">Buyer</option>
+              <option value="Seller" data-i18n="form_opt_sell">Seller</option>
+              <option value="Introduction" data-i18n="form_opt_intro">Introduction</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="note" data-i18n="form_note">Note</label>
+          <textarea id="note" name="note"></textarea>
+          <div class="error" data-error="note"></div>
+        </div>
+        <button class="submit" type="submit" data-i18n="form_send">Prepare enquiry</button>
+        <p class="form-status" id="form-status" role="status"></p>
+        <pre id="enquiry-preview" hidden style="white-space:pre-wrap;border:1px solid var(--line);padding:1.1rem 1.2rem;color:var(--ink-dim);font-family:var(--sans);font-size:0.88rem;"></pre>
+      </form>
+    </div>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/site.js"></script>
+</body>
+</html>
